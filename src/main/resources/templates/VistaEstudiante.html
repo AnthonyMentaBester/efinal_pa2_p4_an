@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>estudiantes</title>
+</head>
+
+<body>
+	<h6 style="font-size: 72px;">Estudiantes UCE</h6>
+	<style>
+		h6 {
+			color: blue;
+			text-align: center;
+		}
+	</style>
+	<form th:action="@{/estudiantes/ingresar}" th:object="${estudiante}" th:method="POST">
+		<table class="table table-success table-striped">
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" th:field="${estudiante.nombre}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Apellido:</label></td>
+				<td><input type="text" th:field="${estudiante.apellido}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Cedula:</label></td>
+				<td><input type="text" th:field="${estudiante.cedula}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Direccion:</label></td>
+				<td><input type="text" th:field="${estudiante.direccion}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Telefono:</label></td>
+				<td><input type="text" th:field="${estudiante.telefono}"></input></td>
+			</tr>
+		</table>
+		<input type="submit" value="Guardar" size="32" style='width:200px; height:36px' class="btn btn-primary"></input>
+
+	</form>
+</body>
+
+</html>

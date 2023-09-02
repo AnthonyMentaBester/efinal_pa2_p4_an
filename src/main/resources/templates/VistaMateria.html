@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>materias</title>
+</head>
+
+<body>
+	<h6 style="font-size: 72px;">Materias Estudiantes UCE</h6>
+	<style>
+		h6 {
+			color: blue;
+			text-align: center;
+		}
+	</style>
+
+	<form th:action="@{/materias/ingresar}" th:object="${materia}" th:method="POST">
+		<table class="table-dark">
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" th:field="${materia.nombre}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Codigo:</label></td>
+				<td><input type="text" th:field="${materia.codigo}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Numero de Creditos:</label></td>
+				<td><input type="text" th:field="${materia.numCreditos}"></input></td>
+			</tr>
+			<tr>
+				<td><label>Profesor:</label></td>
+				<td><input type="text" th:field="${materia.cedProfesor}"></input></td>
+			</tr>
+
+		</table>
+		<input type="submit" value="Guardar" size="32" style='width:200px; height:36px' class="btn btn-primary"></input>
+
+	</form>
+</body>
+
+</html>

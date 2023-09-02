@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> matriculas </title>
+</head>
+<body>
+	<h6 style="font-size: 72px;" >Matricularse UCE</h6>
+	 <style>
+      h6 {
+        color: blue;
+        text-align: center;
+      }
+      </style>
+	<form th:action="@{/matriculas/ingresar}" th:method="POST">
+
+		<table class="table table-dark table-striped">
+			<tr>
+				<td><label>Cedula:</label></td>
+				<td><input type="text" name="cedula" /></td>
+			</tr>
+			<tr>
+				<td><label>Codigo 1:</label></td>
+				<td><input type="text" name="codigo" /></td>
+			</tr>
+			<tr>
+				<td><label>Codigo 2:</label></td>
+				<td><input type="text" name="codigo" /></td>
+			</tr>
+			<tr>
+				<td><label>Codigo 3:</label></td>
+				<td><input type="text" name="codigo" /></td>
+			</tr>
+			<tr>
+				<td><label>Codigo 4:</label></td>
+				<td><input type="text" name="codigo" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Matricular" size="32" style='width:200px; height:36px' class="btn btn-primary" /></input>
+		
+	</form>
+</body>
+
+</html>
